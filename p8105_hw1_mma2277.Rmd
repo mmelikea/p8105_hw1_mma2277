@@ -36,6 +36,14 @@ early_january_weather
 ```
 
 
+Look at the data summary
+
+```{r}
+str(early_january_weather)
+
+skimr:: skim(early_january_weather)
+```
+
 
 
 
