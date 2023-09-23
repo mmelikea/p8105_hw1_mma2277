@@ -23,6 +23,9 @@ Loading moderndive library
 library(moderndive)
 ```
 
+Loading 'early_january_weather' dataset
 
-
+```{r}
+data("early_january_weather")
+```
 
