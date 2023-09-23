@@ -37,3 +37,12 @@ str(early_january_weather)
 skimr:: skim(early_january_weather)
 ```
 
+Mean 'temperature'
+
+```{r}
+
+```
+
+## Discussion: early_january_weather data includes 15 variables (origin, year, month, day, hour, temp, dewp, humid, wind_dir, wind_speed, wind_gust, precip, pressure, visib, and time_hour). There are 1 character variable (origin) and 13 numeric variable (year, month, day, hour, temp, dewp, humid, wind_dir, wind_speed, wind_gust, precip, pressure, visib) and 1 posixct variable (time_hour) present in the data. There are 358 rows and 15 columns present in this dataset. The mean temp 
+
+
