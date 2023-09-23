@@ -43,7 +43,9 @@ Checking the variable names in the dataset
 help("early_january_weather")
 ```
 
-Description: The dataset includes the hourly meterological data for LGA, JFK, EWR for the month of January 2013. The data includes variables origin(weather station), year(time of recording), month(time of recording), day(time of recording), hour(time of recording), temp(temperature in F), dewp(dewpoint in F), humid(Relative humidity), wind_dir(wind direction(in direction)), wind_speed(wind speed), wind_gust(gust speed (in mph)), precip(Precipitation, in inches), pressure(sea level pressure in millibars), visib (visibility in miles), and time_hour(date and hour of the recording). There are `r nrow(early_january_weather)` rows and `r ncol(early_january_weather)` columns present in this dataset. The mean temperature in F is `r round (mean(early_january_weather$temp))`.
+## Description
+
+The dataset includes the hourly meterological data for LGA, JFK, EWR for the month of January 2013. The data includes variables origin(weather station), year(time of recording), month(time of recording), day(time of recording), hour(time of recording), temp(temperature in F), dewp(dewpoint in F), humid(Relative humidity), wind_dir(wind direction(in direction)), wind_speed(wind speed), wind_gust(gust speed (in mph)), precip(Precipitation, in inches), pressure(sea level pressure in millibars), visib (visibility in miles), and time_hour(date and hour of the recording). There are `r nrow(early_january_weather)` rows and `r ncol(early_january_weather)` columns present in this dataset. The mean temperature in F is `r round (mean(early_january_weather$temp))`.
 
 
 Making a scatterplot and exporting to my project directory
@@ -53,4 +55,7 @@ ggplot(early_january_weather, aes(x = time_hour, y = temp, color=humid)) + geom_
 
 ggsave("scatter_plot.pdf", height = 4, width = 6)
 ```
+
+## `Problem 2`
+
 
