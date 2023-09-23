@@ -9,3 +9,10 @@ output: github_document
 library(tidyverse)
 ```
 
+## 'Problem 1'
+Dowloading the package containing the penguins dataset on the console and loading moderndive library
+
+```{r}
+library(moderndive)
+```
+
