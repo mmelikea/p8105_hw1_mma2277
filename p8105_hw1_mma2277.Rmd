@@ -29,3 +29,13 @@ Loading 'early_january_weather' dataset
 data("early_january_weather")
 ```
 
+Look at data
+
+```{r}
+early_january_weather
+```
+
+
+
+
+
