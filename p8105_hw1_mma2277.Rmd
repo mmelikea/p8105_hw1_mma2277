@@ -9,11 +9,20 @@ output: github_document
 library(tidyverse)
 ```
 
-## 'Dowloading the package containing the penguins dataset'
+## 'Problem 1'
+
+Dowloading the package containing the penguins dataset
 
 ```{r}
 install.packages("moderndive")
 ```
+
+Loading moderndive library
+
+```{r}
+library(moderndive)
+```
+
 
 
 
