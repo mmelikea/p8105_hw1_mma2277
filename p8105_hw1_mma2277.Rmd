@@ -16,3 +16,9 @@ Dowloading the package containing the penguins dataset on the console and loadin
 library(moderndive)
 ```
 
+Loading 'early_january_weather' dataset
+
+```{r}
+data("early_january_weather")
+```
+
