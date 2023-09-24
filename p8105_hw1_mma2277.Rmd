@@ -79,3 +79,4 @@ problem2_df=
     vec_factor=as.factor(c("High", "Low", "Medium", "Low","High",     "Medium", "High", "High", "Medium", "Low"))
   )
 ```
+
