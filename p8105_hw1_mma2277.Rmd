@@ -80,3 +80,19 @@ problem2_df=
   )
 ```
 
+#### Taking the mean of each variable in the dataframe, using pull function
+
+```{r, warning= FALSE, eval=FALSE}
+##### Sample mean:
+mean((pull(problem2_df,samp)))
+
+##### Mean of vec_char:
+mean(pull(problem2_df,vec_char))
+
+##### Mean of vec_factor:
+mean(pull(problem2_df,vec_factor))
+
+##### Mean of vec_logical:
+mean(pull(problem2_df,vec_logical))       
+
+```
