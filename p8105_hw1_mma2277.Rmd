@@ -70,7 +70,7 @@ The scatterplot shows that as time_hour(date and hour of the recording) increase
 3) a character vector of length 10
 4) a factor vector of length 10, with 3 different factor “levels”
 
-```{r}
+```{r, message=FALSE}
 problem2_df=
   tibble(
     samp=rnorm(10,0,1),
@@ -78,8 +78,24 @@ problem2_df=
     vec_logical=samp>0,
     vec_factor=c("High", "Low", "Medium", "Low","High", "Medium", "High", "High", "Medium", "Low")
   )
-
-problem2_df
 ```
+
+#### Taking the mean of each variable in the dataframe, using pull function
+
+```{r, warning= FALSE, eval=FALSE}
+##### Sample mean:
+mean((pull(problem2_df,samp)))
+
+##### Mean of vec_char:
+mean(pull(problem2_df,vec_char))
+
+##### Mean of vec_factor:
+mean(pull(problem2_df,vec_factor))
+
+##### Mean of vec_logical:
+mean(pull(problem2_df,vec_logical))       
+
+```
+Mean for sample(a random sample of size 10 from a standard Normal distribution), and mean of logical vector works. However, the mean for factor and character vector do not work. 
 
 
