@@ -76,6 +76,46 @@ problem2_df=
     samp=rnorm(10,0,1),
     vec_char=c("cancer", "stroke", "asthma", "epilepsy","dementia",   "diabetes", "anxiety", "depression", "hypertension", "eczema"),
     vec_logical=samp>0,
-    vec_factor=factor(c("High", "Low", "Medium", "Low", "High","Medium", "High", "High", "Medium", "Low"), levels=c("High", "Median", "Low"))
+    vec_factor=factor(c("High", "Low", "Medium", "Low","High","Medium", "High", "High", "Medium", "Low"), levels=c("Low", "Medium", "High"))
   )
 ```
+
+#### Taking the mean of each variable in the dataframe, using pull function
+
+```{r, warning= FALSE, eval=FALSE}
+##### Sample mean:
+mean((pull(problem2_df,samp)))
+
+##### Mean of vec_char:
+mean(pull(problem2_df,vec_char))
+
+##### Mean of vec_factor:
+mean(pull(problem2_df,vec_factor))
+
+##### Mean of vec_logical:
+mean(pull(problem2_df,vec_logical))       
+
+```
+
+##### Mean for sample(a random sample of size 10 from a standard Normal distribution), and mean of logical vector works. However, the mean for factor and character vector do not work. 
+
+#### Converting variables from one type to another
+
+```{r, warning= FALSE, eval=FALSE}
+##### From character to numeric:
+mean(as.numeric(pull(problem2_df,vec_char)))
+
+##### From factor to numeric:
+mean(as.numeric(pull(problem2_df,vec_factor)))
+
+##### From logical to numeric:
+mean(as.numeric(pull(problem2_df,vec_logical)))
+```
+
+##### From character to numeric: When we run it, we get NA for the mean which means we cannot convert variables from character to numeric.This explains why we did not get mean at the first place without converting to numerical. 
+
+##### From factor to numeric: When we run it, we get a mean, because our factor variables were converted to numeric variables. Levels become numbers. We did not get the mean before because the variables were not converted to numeric, it was considered character variables. Factor variables can be converted to numeric variables. The mean is `r mean(as.numeric(pull(problem2_df,vec_factor)))`.
+
+##### From logical to numeric: We get a mean as `r mean(as.numeric(pull(problem2_df,vec_logical)))`. This is because logical functions can be converted to numeric factors. This explains why we get mean at the first place without converting to numerical.
+
+
